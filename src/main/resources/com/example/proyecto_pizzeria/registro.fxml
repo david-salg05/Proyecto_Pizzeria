@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.proyecto_pizzeria.Registro_Controller"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto_pizzeria.Registro_Controller">
+   <children>
+      <Label layoutX="72.0" layoutY="21.0" prefHeight="40.0" prefWidth="87.0" text="Registro">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="54.0" prefHeight="27.0" prefWidth="139.0" text="Crea tu cuenta de cliente" />
+      <TextField layoutX="72.0" layoutY="100.0" promptText="Nombre y apellidos" />
+      <TextField layoutX="70.0" layoutY="140.0" promptText="Usuario" />
+      <TextField layoutX="72.0" layoutY="180.0" promptText="Correo electrónico" />
+      <TextField layoutX="72.0" layoutY="223.0" promptText="Contraseña" />
+      <TextField layoutX="70.0" layoutY="267.0" promptText="Confirmar contraseña" />
+      <Button layoutX="107.0" layoutY="334.0" mnemonicParsing="false" text="Registrarse" />
+      <Button layoutX="263.0" layoutY="334.0" mnemonicParsing="false" text="Volver al login " />
+   </children>
 </AnchorPane>
