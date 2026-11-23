@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto_pizzeria.Login_Controller">
+   <children>
+      <Label layoutX="258.0" layoutY="44.0" text="INICIAR SESIÓN" />
+      <TextField layoutX="225.0" layoutY="108.0" promptText="Usuario" />
+      <TextField layoutX="225.0" layoutY="154.0" promptText="Contraseña" />
+      <Button layoutX="226.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Entrar" />
+      <Label layoutX="222.0" layoutY="253.0" text="----- ¿No tienes cuenta? ----" />
+      <Button layoutX="225.0" layoutY="286.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Registrarse" />
+   </children>
+</AnchorPane>
