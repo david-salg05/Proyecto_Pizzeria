@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto_pizzeria.main.propietario.TopClientes_Controller">
+   <children>
+      <Label layoutX="54.0" layoutY="21.0" text="Clientes que más compran">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TableView layoutX="82.0" layoutY="100.0" prefHeight="200.0" prefWidth="418.0">
+        <columns>
+          <TableColumn prefWidth="213.33334350585938" text="Cliente" />
+          <TableColumn prefWidth="203.33331298828125" text="Nº de pedidos" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
