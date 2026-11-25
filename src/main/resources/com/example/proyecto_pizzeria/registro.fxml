@@ -12,12 +12,12 @@
          </font>
       </Label>
       <Label layoutX="72.0" layoutY="54.0" prefHeight="27.0" prefWidth="139.0" text="Crea tu cuenta de cliente" />
-      <TextField layoutX="72.0" layoutY="100.0" promptText="Nombre y apellidos" />
-      <TextField layoutX="70.0" layoutY="140.0" promptText="Usuario" />
-      <TextField layoutX="72.0" layoutY="180.0" promptText="Correo electrónico" />
-      <TextField layoutX="72.0" layoutY="223.0" promptText="Contraseña" />
-      <TextField layoutX="70.0" layoutY="267.0" promptText="Confirmar contraseña" />
-      <Button layoutX="107.0" layoutY="334.0" mnemonicParsing="false" text="Registrarse" />
+      <TextField fx:id="nombre" layoutX="72.0" layoutY="100.0" promptText="Nombre y apellidos" />
+      <TextField fx:id="usuario" layoutX="70.0" layoutY="140.0" promptText="Usuario" />
+      <TextField fx:id="correo" layoutX="72.0" layoutY="180.0" promptText="Correo electrónico" />
+      <TextField fx:id="contrasenha1" layoutX="72.0" layoutY="223.0" promptText="Contraseña" />
+      <TextField fx:id="contrasenha2" layoutX="70.0" layoutY="267.0" promptText="Confirmar contraseña" />
+      <Button layoutX="107.0" layoutY="334.0" mnemonicParsing="false" onAction="#registrarse" text="Registrarse" />
       <Button layoutX="263.0" layoutY="334.0" mnemonicParsing="false" onAction="#volver" text="Volver al login " />
    </children>
 </AnchorPane>

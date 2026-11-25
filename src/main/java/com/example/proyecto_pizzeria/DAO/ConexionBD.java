@@ -16,7 +16,7 @@ public class ConexionBD {
         try {
             con = DriverManager.getConnection(URL, USER, PWD);
         } catch (SQLException e) {
-            System.out.println("Error de conexion");
+            System.out.println("Error de conexion: " + e.getMessage());
         }
         return con;
     }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto_pizzeria.DrawerProp_Controller">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox prefHeight="400.0" prefWidth="146.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="401.0" prefWidth="121.0">
+                     <children>
+                        <Button fx:id="inicio" layoutX="47.0" layoutY="107.0" mnemonicParsing="false" onAction="#mostrarInicio" text="Inicio" />
+                        <Button fx:id="pizzas" layoutX="47.0" layoutY="152.0" mnemonicParsing="false" onAction="#mostrarPizzas" text="Pizzas" />
+                        <Button fx:id="clientes" layoutX="47.0" layoutY="200.0" mnemonicParsing="false" onAction="#mostrarClientes" text="Clientes" />
+                        <Button fx:id="pedidos" layoutX="47.0" layoutY="295.0" mnemonicParsing="false" onAction="#mostrarPedidos" text="Pedidos" />
+                        <Button fx:id="topClientes" layoutX="47.0" layoutY="244.0" mnemonicParsing="false" onAction="#mostrarTopClientes" text="Top Clientes" />
+                        <Button layoutX="47.0" layoutY="345.0" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar Sesión" />
+                     </children></AnchorPane>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="contenedorContenido" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
