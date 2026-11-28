@@ -65,6 +65,11 @@ public class DrawerProp_Controller {
         cargarVista("/com/example/proyecto_pizzeria/propietario/topClientes.fxml");
     }
 
+    //Funcion que muestra el perfil del usuario que ha iniciado sesion
+    public void mostrarPerfil(ActionEvent actionEvent) throws IOException {
+        cargarVista("/com/example/proyecto_pizzeria/perfilProp.fxml");
+    }
+
     //FUncion que vuelve a la ventana de login
     public void cerrarSesion(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));

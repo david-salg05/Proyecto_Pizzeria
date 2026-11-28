@@ -9,8 +9,6 @@ module com.example.proyecto_pizzeria {
     opens com.example.proyecto_pizzeria to javafx.fxml;
 //  exports com.example.proyecto_pizzeria.main;
    // opens com.example.proyecto_pizzeria.main to javafx.fxml;
-    exports com.example.proyecto_pizzeria.main.propietario;
-    opens com.example.proyecto_pizzeria.main.propietario to javafx.fxml;
     exports com.example.proyecto_pizzeria.main.clientes;
     opens com.example.proyecto_pizzeria.main.clientes to javafx.fxml;
     exports com.example.proyecto_pizzeria;

@@ -4,20 +4,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto_pizzeria.main.propietario.Pedidos_Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto_pizzeria.Pedidos_Controller">
    <children>
       <Label layoutX="66.0" layoutY="14.0" text="Pedidos">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TableView layoutX="64.0" layoutY="100.0" prefHeight="200.0" prefWidth="480.0">
+      <TableView fx:id="tablaPedidos" layoutX="64.0" layoutY="100.0" prefHeight="200.0" prefWidth="480.0">
         <columns>
-          <TableColumn prefWidth="96.66665649414062" text="Cliente" />
-          <TableColumn prefWidth="95.33331298828125" text="Fecha" />
-            <TableColumn prefWidth="101.3333740234375" text="Pizzas" />
-            <TableColumn prefWidth="94.0" text="Estado" />
-            <TableColumn prefWidth="94.6666259765625" text="Acciones" />
+          <TableColumn fx:id="cliente" prefWidth="96.66665649414062" text="Cliente" />
+          <TableColumn fx:id="fecha" prefWidth="95.33331298828125" text="Fecha" />
+            <TableColumn fx:id="pizzas" prefWidth="101.3333740234375" text="Pizzas" />
+            <TableColumn fx:id="estado" prefWidth="94.0" text="Estado" />
+            <TableColumn fx:id="acciones" prefWidth="94.6666259765625" text="Acciones" />
         </columns>
       </TableView>
    </children>

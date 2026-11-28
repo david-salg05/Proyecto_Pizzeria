@@ -15,4 +15,5 @@ public class Usuario {
     private String password;
     private String tipo;
     private boolean activo;
+    private int total_pedidos;
 }

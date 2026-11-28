@@ -1,5 +1,6 @@
 package com.example.proyecto_pizzeria;
 
+import com.example.proyecto_pizzeria.DAO.UsuarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -58,7 +59,21 @@ public class Registro_Controller {
         String con1 = contrasenha1.getText();
         String con2 = contrasenha2.getText();
 
-        if(UsuarioService.registrarCliente(nom, usu, corr, con1, con2)){
+        if(nom.isEmpty() || usu.isEmpty() || corr.isEmpty() || con1.isEmpty() || con2.isEmpty()){
+            //Muestro el error
+            alert.setContentText("Debes rellenar todos los campos");
+            alert.showAndWait();
+            return;
+        }
+
+        else if(!con1.equalsIgnoreCase(con2)){
+            //Muestro el error
+            alert.setContentText("Las contraseñas no son iguales, escríbelas de nuevo");
+            alert.showAndWait();
+            return;
+        }
+
+        if(UsuarioDAO.registrarCliente(nom, usu, corr, con1)){
             //Muestro la alerta
             alert.setContentText("Cliente registrado correctamente!");
             alert.showAndWait();

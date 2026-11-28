@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto_pizzeria.NuevaPizza_Controller">
+   <children>
+      <Button layoutX="239.0" layoutY="329.0" mnemonicParsing="false" onAction="#anhadir" text="Añadir" />
+      <TextField fx:id="nombre" layoutX="293.0" layoutY="100.0" />
+      <Label layoutX="200.0" layoutY="104.0" text="Nombre:" />
+      <TextField fx:id="precio" layoutX="293.0" layoutY="209.0" />
+      <TextField fx:id="descripcion" layoutX="293.0" layoutY="152.0" />
+      <TextField fx:id="imagen" layoutX="293.0" layoutY="272.0" />
+      <Label layoutX="200.0" layoutY="156.0" text="Descripción:" />
+      <Label layoutX="200.0" layoutY="276.0" text="Imagen:" />
+      <Label layoutX="200.0" layoutY="213.0" text="Precio:" />
+      <Label layoutX="221.0" layoutY="42.0" text="Añadir nueva pizza">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="357.0" layoutY="329.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+   </children>
+</AnchorPane>

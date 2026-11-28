@@ -1,5 +1,7 @@
 package com.example.proyecto_pizzeria;
 
+import com.example.proyecto_pizzeria.DAO.UsuarioDAO;
+import com.example.proyecto_pizzeria.entity.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +22,8 @@ public class Login_Controller {
 
     @FXML
     TextField contrasenha;
+
+    public static Usuario usuarioActual;
 
     public void registrarse(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("registro.fxml"));
@@ -47,12 +51,24 @@ public class Login_Controller {
         String usu = usuario.getText();
         String contr = contrasenha.getText();
 
-        //Compruebo que los datos introducidos sean correctos
-        if (UsuarioService.consultarUsuario(usu, contr)){
+        if (usu.isEmpty() || contr.isEmpty()){
+            //Muestro el error
+            alert.setContentText("El usuario o la contraseña están vacíos, inténtelo de nuevo");
+            alert.showAndWait();
+            return;
+        }
 
-            String tipo = UsuarioService.comprobarTipo(usu, contr);
+
+
+        //Compruebo que los datos introducidos sean correctos
+        if (UsuarioDAO.consultarUsuario(usu, contr)){
+
+            String tipo = UsuarioDAO.comprobarTipo(usu, contr);
 
             if (tipo.equalsIgnoreCase("propietario")){
+
+                usuarioActual = UsuarioDAO.devolverUsuario(usu, contr);
+
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("drawerProp.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 600, 440);
                 Stage stage = (Stage)((Node)(actionEvent.getSource())).getScene().getWindow();

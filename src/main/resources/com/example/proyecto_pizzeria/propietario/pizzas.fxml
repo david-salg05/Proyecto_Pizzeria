@@ -4,20 +4,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto_pizzeria.main.propietario.Pizzas_Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto_pizzeria.Pizzas_Controller">
    <children>
       <Label layoutX="51.0" layoutY="29.0" text="GESTIÓN DE PIZZAS">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="449.0" layoutY="31.0" mnemonicParsing="false" text="+ Nueva pizza" />
-      <TableView layoutX="80.0" layoutY="109.0" prefHeight="200.0" prefWidth="440.0">
+      <Button layoutX="449.0" layoutY="31.0" mnemonicParsing="false" onAction="#nuevaPizza" text="+ Nueva pizza" />
+      <TableView fx:id="tablaPizzas" layoutX="80.0" layoutY="109.0" prefHeight="200.0" prefWidth="440.0">
         <columns>
-          <TableColumn prefWidth="119.33334350585938" text="Nombre" />
-          <TableColumn prefWidth="113.66668701171875" text="Precio" />
-            <TableColumn prefWidth="105.0" text="Stock" />
-            <TableColumn prefWidth="103.0" text="Acciones" />
+          <TableColumn fx:id="columnaNombre" prefWidth="119.33334350585938" text="Nombre" />
+          <TableColumn fx:id="columnaPrecio" prefWidth="79.00001525878906" text="Precio" />
+            <TableColumn fx:id="columnaStock" prefWidth="113.66668701171875" text="Stock" />
+            <TableColumn fx:id="columnaAcciones" prefWidth="130.33328247070312" text="Acciones" />
         </columns>
       </TableView>
    </children>

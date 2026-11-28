@@ -1,6 +1,6 @@
-
 package com.example.proyecto_pizzeria;
 
+import com.example.proyecto_pizzeria.DAO.UsuarioDAO;
 import com.example.proyecto_pizzeria.entity.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -47,7 +47,7 @@ public class Clientes_Controller {
         colCorreo.setCellValueFactory(new PropertyValueFactory<>("email"));
 
         // Obtengo todos los clientes de la BD
-        ArrayList<Usuario> listaClientes = UsuarioService.devolverClientes();
+        ArrayList<Usuario> listaClientes = UsuarioDAO.devolverClientes();
 
         // Los añado a la tabla
         tablaClientes.getItems().addAll(listaClientes);
@@ -81,7 +81,7 @@ public class Clientes_Controller {
     public void eliminarCliente(Usuario usuario) {
 
         try {
-            boolean eliminado = UsuarioService.eliminarCliente(usuario.getUsuario());
+            boolean eliminado = UsuarioDAO.eliminarCliente(usuario.getUsuario());
 
             if (eliminado) {
                 tablaClientes.getItems().remove(usuario);
@@ -105,7 +105,7 @@ public class Clientes_Controller {
 
         String texto = barraBuscar.getText();
 
-        ArrayList<Usuario> listaClientes = UsuarioService.buscarClientes(texto);
+        ArrayList<Usuario> listaClientes = UsuarioDAO.buscarClientes(texto);
 
         tablaClientes.getItems().clear();
         tablaClientes.getItems().addAll(listaClientes);
